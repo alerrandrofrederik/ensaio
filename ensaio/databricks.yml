@@ -31,7 +31,8 @@ targets:
       host: https://dbc-302cbd09-e572.cloud.databricks.com
     variables:
       catalog: workspace
-      schema: ${workspace.current_user.short_name}
+      # development mode prefixes this with dev_<user>_ (e.g. dev_alice_ensaio)
+      schema: ensaio
   prod:
     mode: production
     workspace:

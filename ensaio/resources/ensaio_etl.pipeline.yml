@@ -5,7 +5,7 @@ resources:
     ensaio_etl:
       name: ensaio_etl
       catalog: ${var.catalog}
-      schema: ${var.schema}
+      schema: ${resources.schemas.ensaio_schema.name}
       serverless: true
       root_path: "../src/ensaio_etl"
 
